@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  /* background-image: url("https://www.financialexpress.com/wp-content/uploads/2018/03/Screenshot_4.png"); */
 }
 
 .App-logo {
@@ -36,3 +37,6 @@
     transform: rotate(360deg);
   }
 }
+
+
+h1 {margin-top: 0;}

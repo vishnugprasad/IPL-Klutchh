@@ -1,8 +1,20 @@
 .tableHeader{
+    color: aliceblue;
     border: 1px black solid;
-    background-color: beige;
+
+    background-color: rgb(67, 64, 143);
 }
 
 tr:nth-child(even){
-    background-color: rgb(143, 143, 135);
+    background-color: rgb(235, 235, 235);
+}
+
+.matches{
+    display: flex;
+    justify-content: center;
+}
+
+.matchTable{
+    border: 2px black solid;
+    border-radius: 0.5rem;
 }

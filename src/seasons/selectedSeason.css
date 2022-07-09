@@ -1,0 +1,30 @@
+.selectedSeason{
+   
+    width: fit-content;
+    margin:auto;
+    background-color: rgb(255, 255, 255);
+}
+
+.stats{
+  
+    border: 1px black solid;
+    background-color: #04247C;
+    border-radius: .5rem;
+   
+}
+
+.seasonName{
+    /* color: rgb(128, 22, 22); */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.button{
+    width: 100%;
+    background-color: #FF4500;
+    border-radius: 0.5rem;
+    border-color: #6AABD2;
+}
+
+.statFont{
+    font-family: ;
+    color: white;
+}

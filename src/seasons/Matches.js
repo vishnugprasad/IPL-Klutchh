@@ -42,8 +42,8 @@ function Matches(props) {
         getData()
     },[])
   return (
-    <div>
-        <table>
+    <div className='matches'>
+        <table className='matchTable'>
             <tr>
                 <th className='tableHeader'>Date</th>
                 <th className='tableHeader'>team</th>

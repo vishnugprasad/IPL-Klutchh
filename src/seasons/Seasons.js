@@ -23,17 +23,23 @@ function Seasons() {
         }
         getData()
     },[])
+     
+
+    //function to go back
+    const cancelSelection = ()=>{
+        setSelectedSeason(null)
+    }
     
-  return( selectedSeason ? <SelectedSeason data = {selectedSeason}></SelectedSeason> : (
-    <div>
-        <h1>SEASONS</h1>
+  return( selectedSeason ? <SelectedSeason data = {selectedSeason} cancelSelection = {cancelSelection}></SelectedSeason> : (
+    <div className='background'>
+        <h1 className='seasonHeading'>IPL SEASONS</h1>
         <div className='seasonBlock'>
         <div className='seasonTable'>    
           {seasonData.map((season)=>{
               
               return( 
               season.Season_Id ? 
-              <button key = {season.Season_Id} onClick={()=>{
+              <button  key = {season.Season_Id} onClick={()=>{
                   setSelectedSeason(season)
               }} className='seasonNum'>
                   {`Season ${season.Season_Id} `}

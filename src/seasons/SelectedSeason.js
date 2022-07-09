@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Papa from "papaparse"
 import Matches from './Matches'
+import "./selectedSeason.css"
 
 function SelectedSeason( props) {
 
     const [ playerDetails, setPlayerDetails] = useState([])
+    
     useEffect(()=>{
         async function getData() {
           const response = await fetch('/data/Player.csv')
@@ -26,12 +28,17 @@ function SelectedSeason( props) {
 
 
   return (
-    <div>
-        <h1>{`SEASON YEAR ${props.data.Season_Year}`}</h1>
-        <div>
-            <h1>Man Of the Series {(playerDetails.find((player)=>{return player.Player_Id === props.data.Man_of_the_Series_Id})||{}).Player_Name}</h1>
-            <h1>Orange Cap {(playerDetails.find((player)=>{return player.Player_Id === props.data.Orange_Cap_Id})||{}).Player_Name}</h1>
-            <h1>Purple Cap {(playerDetails.find((player)=>{return player.Player_Id === props.data.Purple_Cap_Id})||{}).Player_Name}</h1>
+    <div className='selectedSeason'>
+        
+        <button className='button' onClick={props.cancelSelection}>BACK</button>
+        <div className='stats'>
+        
+       
+            <h1 className='seasonName'>{`SEASON YEAR ${props.data.Season_Year}`}</h1>
+            <h3 className='statFont'>Man Of the Series: {(playerDetails.find((player)=>{return player.Player_Id === props.data.Man_of_the_Series_Id})||{}).Player_Name}</h3>
+            <h3 className='statFont'>Orange Cap: {(playerDetails.find((player)=>{return player.Player_Id === props.data.Orange_Cap_Id})||{}).Player_Name}</h3>
+            <h3 className='statFont'>Purple Cap: {(playerDetails.find((player)=>{return player.Player_Id === props.data.Purple_Cap_Id})||{}).Player_Name}</h3>
+       
         </div>
         <Matches seasonId = {props.data.Season_Id}></Matches>
     </div>
