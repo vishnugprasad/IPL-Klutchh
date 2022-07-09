@@ -16,7 +16,7 @@ function SelectedSeason( props) {
           const csv = decoder.decode(result.value) // the csv text
           const results = Papa.parse(csv, { header: true }) // object with { data, errors, meta }
           const rows = results.data // array of objects
-          const players = [props.data.Man_of_the_Series_Id, props.data.Orange_Cap_Id, props.data.Purple_Cap_Id,]
+          const players = [props.data.Man_of_the_Series_Id, props.data.Orange_Cap_Id, props.data.Purple_Cap_Id]
           const playerInfo = rows.filter((row)=>{
               return players.includes(row.Player_Id)
           })
