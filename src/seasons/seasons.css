@@ -1,0 +1,22 @@
+.seasonBlock {
+    display: flex;
+    justify-content: center;
+}
+
+.seasonTable{
+    display: flex;
+    flex-direction: column;
+    border: 2px black solid;
+    padding: 25px;
+    background-color: #6f42c1;
+    border-radius: 1rem;
+
+}
+
+.seasonNum {
+    border: 2px black solid;
+    font-size: 30px;
+    background-color: #adb5bd;
+    border-radius: 1rem;
+    margin-bottom: 5px;
+}

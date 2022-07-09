@@ -1,0 +1,8 @@
+.tableHeader{
+    border: 1px black solid;
+    background-color: beige;
+}
+
+tr:nth-child(even){
+    background-color: rgb(143, 143, 135);
+}
