@@ -40,7 +40,7 @@ function Matches(props) {
           
         }
         getData()
-    },[])
+    },[props.seasonId])
   return (
     <div className='matches'>
         <table className='matchTable'>

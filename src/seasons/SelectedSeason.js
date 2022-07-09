@@ -24,7 +24,7 @@ function SelectedSeason( props) {
           setPlayerDetails(playerInfo)
         }
         getData()
-    },[])
+    },[props.data.Man_of_the_Series_Id, props.data.Orange_Cap_Id, props.data.Purple_Cap_Id])
 
 
   return (
